@@ -2,6 +2,7 @@ import time
 import random
 import logging
 import re
+import os
 # Patch distutils for Python 3.12+ compatibility
 import sys
 if sys.version_info >= (3, 12):
@@ -40,6 +41,15 @@ class TwitterScraper:
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-blink-features=AutomationControlled')
+        
+        # Check for custom binary location (Render)
+        chrome_bin = os.environ.get("CHROME_BIN")
+        if chrome_bin:
+            options.binary_location = chrome_bin
+
+        # If binary is set, we might need to be careful with version_main
+        # But usually uc handles it if binary is provided.
+        # We pass headless=True/False to uc.Chrome if needed, but we set options.headless already.
         
         driver = uc.Chrome(options=options)
         return driver
