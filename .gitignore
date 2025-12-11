@@ -1,3 +1,9 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
 # Python
 __pycache__/
 *.py[cod]
@@ -22,11 +28,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Environment variables
-.env
-.env.local
-.env.*.local
 
 # Node
 node_modules/
@@ -53,8 +54,13 @@ Thumbs.db
 *.sqlite
 *.sqlite3
 
+# Chrome Driver
+chromedriver
+chromedriver.exe
+
 # Output files
 output/
 results/
+data/
 *.csv
 *.json
