@@ -222,6 +222,8 @@ MIT License - feel free to use this project for your own purposes.
 
 ## Contributing
 
+need to add instagram tracking and news sites
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Disclaimer
